@@ -1,119 +1,118 @@
 /* General Styles */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    height: 100vh;
-    font-family: "Rubik", sans-serif;
-    background: linear-gradient(180deg, #807ece 0%, #8e7ece 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background: linear-gradient(180deg, #807ece 0%, #8e7ece 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
-    cursor: pointer;
-    background: none;
-    border: none;
-    font: inherit;
-    color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
 }
 
 /* Calculator Styles */
 
 .calculator {
-    display: flex;
-    flex-direction: column;
-    width: 35.6rem;
-    height: 56.6rem;
-    padding: 3.2rem;
-    border-radius: 4.8rem;
-    background: #2d2a37;
-    box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.22) inset, 0px 6px 8px 0px rgba(255, 255, 255, 0.1) inset,
-        0px 8px 17px 0px rgba(0, 0, 0, 0.29), 0px 30px 30px 0px rgba(0, 0, 0, 0.26),
-        0px 68px 41px 0px rgba(0, 0, 0, 0.15), 0px 120px 48px 0px rgba(0, 0, 0, 0.04),
-        0px 188px 52px 0px rgba(0, 0, 0, 0.01), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: 35.6rem;
+  height: 56.6rem;
+  padding: 3.2rem;
+  border-radius: 4.8rem;
+  background: #2d2a37;
+  box-shadow: 0px -4px 5px 0px rgba(0, 0, 0, 0.22) inset, 0px 6px 8px 0px rgba(255, 255, 255, 0.1) inset,
+    0px 8px 17px 0px rgba(0, 0, 0, 0.29), 0px 30px 30px 0px rgba(0, 0, 0, 0.26), 0px 68px 41px 0px rgba(0, 0, 0, 0.15),
+    0px 120px 48px 0px rgba(0, 0, 0, 0.04), 0px 188px 52px 0px rgba(0, 0, 0, 0.01), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Display Styles */
 
 .display {
-    display: flex;
-    flex-direction: column;
-    padding: 0 2.2rem;
-    margin-bottom: 2.6rem;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2.2rem;
+  margin-bottom: 2.6rem;
+  flex-grow: 1;
 }
 
 .display__previous {
-    color: #6b6b6b;
-    text-align: right;
-    font-size: 2rem;
-    line-height: 140%;
-    letter-spacing: -0.4px;
-    margin-bottom: 0.8rem;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: end;
+  color: #6b6b6b;
+  text-align: right;
+  font-size: 2rem;
+  line-height: 140%;
+  letter-spacing: -0.4px;
+  margin-bottom: 0.8rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .display__operation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 3.2rem;
-    color: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3.2rem;
+  color: #ebebeb;
 }
 
 .display__equal {
-    color: #6b6b6b;
+  color: #6b6b6b;
 }
 
 /* Buttons Styles */
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
 }
 
 .button {
-    color: #fff;
-    font-size: 2.4rem;
-    letter-spacing: -0.48px;
-    width: 64px;
-    height: 64px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2d2a37;
-    box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.06) inset, 0px 0px 2px 0px rgba(0, 0, 0, 0.29),
-        0px 2px 4px 0px rgba(0, 0, 0, 0.26), 0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
-        0px 11px 7px 0px rgba(0, 0, 0, 0.01);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  color: #fff;
+  font-size: 2.4rem;
+  letter-spacing: -0.48px;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2d2a37;
+  box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.06) inset, 0px 0px 2px 0px rgba(0, 0, 0, 0.29),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.26), 0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
+    0px 11px 7px 0px rgba(0, 0, 0, 0.01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button--clear-entry {
-    color: #975dfa;
+  color: #975dfa;
 }
 
 .button--operator {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
 }
 
 .button--equal {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7f45e2;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7f45e2;
 }
 
 .button:active:not(.button[disabled]) {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
