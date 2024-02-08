@@ -4,10 +4,10 @@
 
 ### Features:
 
-- Supports keyboard
-- Handles arithmetic operations including percentage (%) functionality
-- Supports clear (C) and clear entry (CE) functionality
-- Toggles between negative and positive on a given input (+/-)
+-   Supports keyboard
+-   Handles arithmetic operations including percentage (%) functionality
+-   Supports clear (C) and clear entry (CE) functionality
+-   Toggles between negative and positive on a given input (+/-)
 
 ![Calculator's Desktop Screenshot](./images/calculator-desktop.png?raw=true "Calculator (Desktop)")
 
