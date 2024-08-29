@@ -160,6 +160,21 @@ const clearDisplay = function (event) {
 	updateCurrentDisplay();
 };
 
+const divideByHundred = function (event) {
+	if (DISPLAY_VALUE === "" || DISPLAY_VALUE === "0" || DISPLAY_VALUE === "0.") {
+		DISPLAY_VALUE = "0.00";
+	} else if (DISPLAY_VALUE == 0) {
+		DISPLAY_VALUE += "00";
+	} else {
+		DISPLAY_VALUE = DISPLAY_VALUE / 100;
+	}
+
+	if (FIRST_OPERAND) FIRST_OPERAND = DISPLAY_VALUE;
+	else SECOND_OPERAND = DISPLAY_VALUE;
+
+	updateCurrentDisplay();
+};
+
 numbersButtonsElements.forEach((button) => {
 	button.addEventListener("click", appendNumber);
 });
@@ -175,3 +190,5 @@ equalButtonElement.addEventListener("click", getOperationResult);
 clearEntryButtonElement.addEventListener("click", clearEntry);
 
 clearButtonElement.addEventListener("click", clearDisplay);
+
+percentageButtonElement.addEventListener("click", divideByHundred);
