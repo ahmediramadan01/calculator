@@ -175,6 +175,19 @@ const divideByHundred = function (event) {
 	updateCurrentDisplay();
 };
 
+const togglePlusMinus = function (event) {
+	if (DISPLAY_VALUE === "" || DISPLAY_VALUE === "0") {
+		DISPLAY_VALUE = "0";
+	} else {
+		DISPLAY_VALUE *= -1;
+	}
+
+	if (!OPERATOR) FIRST_OPERAND = DISPLAY_VALUE;
+	else SECOND_OPERAND = DISPLAY_VALUE;
+
+	updateCurrentDisplay();
+};
+
 numbersButtonsElements.forEach((button) => {
 	button.addEventListener("click", appendNumber);
 });
@@ -192,3 +205,5 @@ clearEntryButtonElement.addEventListener("click", clearEntry);
 clearButtonElement.addEventListener("click", clearDisplay);
 
 percentageButtonElement.addEventListener("click", divideByHundred);
+
+plusMinusButtonElement.addEventListener("click", togglePlusMinus);
