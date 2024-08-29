@@ -59,3 +59,50 @@ function updateCurrentDisplay() {
 	displaySecondElement.textContent = SECOND_OPERAND;
 }
 updateCurrentDisplay();
+
+const appendNumber = function (event) {
+	const clickedNumber = event.key || event.target.dataset.value;
+
+	if (OPERATOR === "" && FIRST_OPERAND.length <= 10) {
+		if (DISPLAY_VALUE === "0" || DISPLAY_VALUE === "") {
+			DISPLAY_VALUE = clickedNumber;
+		} else {
+			DISPLAY_VALUE += clickedNumber;
+		}
+		FIRST_OPERAND = DISPLAY_VALUE;
+	} else if (OPERATOR !== "" && SECOND_OPERAND.length <= 10) {
+		if (DISPLAY_VALUE === "0" || DISPLAY_VALUE === "") {
+			DISPLAY_VALUE = clickedNumber;
+		} else {
+			DISPLAY_VALUE += clickedNumber;
+		}
+		SECOND_OPERAND = DISPLAY_VALUE;
+	}
+
+	updateCurrentDisplay();
+};
+
+const appendOperator = function (event) {
+	if (FIRST_OPERAND && SECOND_OPERAND && OPERATOR) {
+		DISPLAY_VALUE = operate(FIRST_OPERAND, SECOND_OPERAND, OPERATOR);
+		FIRST_OPERAND = DISPLAY_VALUE;
+		DISPLAY_VALUE = "";
+		displayEqualElement.textContent = "";
+		SECOND_OPERAND = "";
+	}
+
+	const clickedOperator = event.target?.closest(".button--operator").dataset.value || event;
+	OPERATOR = clickedOperator;
+
+	DISPLAY_VALUE = "";
+
+	updateCurrentDisplay();
+};
+
+numbersButtonsElements.forEach((button) => {
+	button.addEventListener("click", appendNumber);
+});
+
+operatorButtonElement.forEach((button) => {
+	button.addEventListener("click", appendOperator);
+});
