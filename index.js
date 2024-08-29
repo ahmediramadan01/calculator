@@ -99,6 +99,21 @@ const appendOperator = function (event) {
 	updateCurrentDisplay();
 };
 
+const appendDecimalPoint = function (event) {
+	if (!DISPLAY_VALUE.includes(".")) {
+		if (DISPLAY_VALUE === "" || DISPLAY_VALUE === "0") {
+			DISPLAY_VALUE = "0.";
+		} else {
+			DISPLAY_VALUE += ".";
+		}
+
+		if (!OPERATOR) FIRST_OPERAND = DISPLAY_VALUE;
+		else SECOND_OPERAND = DISPLAY_VALUE;
+	}
+
+	updateCurrentDisplay();
+};
+
 numbersButtonsElements.forEach((button) => {
 	button.addEventListener("click", appendNumber);
 });
@@ -106,3 +121,5 @@ numbersButtonsElements.forEach((button) => {
 operatorButtonElement.forEach((button) => {
 	button.addEventListener("click", appendOperator);
 });
+
+decimalButtonElement.addEventListener("click", appendDecimalPoint);
