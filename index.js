@@ -12,6 +12,15 @@ const displayFirstElement = document.querySelector(".display__first");
 const displayOperatorElement = document.querySelector(".display__operator");
 const displaySecondElement = document.querySelector(".display__second");
 
+const clearEntryButtonElement = document.querySelector(".button--clear-entry");
+const clearButtonElement = document.querySelector(".button--clear");
+const numbersButtonsElements = document.querySelectorAll(".button--number");
+const operatorButtonElement = document.querySelectorAll(".button--operator");
+const decimalButtonElement = document.querySelector(".button--decimal");
+const equalButtonElement = document.querySelector(".button--equal");
+const percentageButtonElement = document.querySelector(".button--percentage");
+const plusMinusButtonElement = document.querySelector(".button--plus-minus");
+
 const add = function (a, b) {
 	return parseFloat(a) + parseFloat(b);
 };
