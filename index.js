@@ -1,5 +1,10 @@
 "use strict";
 
+let OPERATOR = "",
+	FIRST_OPERAND = "0",
+	SECOND_OPERAND = "",
+	DISPLAY_VALUE = "0";
+
 const add = function (a, b) {
 	return parseFloat(a) + parseFloat(b);
 };
