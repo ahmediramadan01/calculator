@@ -130,6 +130,26 @@ const getOperationResult = function (event) {
 	updateCurrentDisplay();
 };
 
+const clearEntry = function (event) {
+	if (OPERATOR === "") {
+		if (DISPLAY_VALUE === "0" || DISPLAY_VALUE === "" || DISPLAY_VALUE.length === 1) {
+			DISPLAY_VALUE = "0";
+		} else {
+			DISPLAY_VALUE = DISPLAY_VALUE.slice(0, -1);
+		}
+		FIRST_OPERAND = DISPLAY_VALUE;
+	} else {
+		if (DISPLAY_VALUE === "0" || DISPLAY_VALUE === "" || DISPLAY_VALUE.length === 1) {
+			DISPLAY_VALUE = "0";
+		} else {
+			DISPLAY_VALUE = DISPLAY_VALUE.slice(0, -1);
+		}
+		SECOND_OPERAND = DISPLAY_VALUE;
+	}
+
+	updateCurrentDisplay();
+};
+
 numbersButtonsElements.forEach((button) => {
 	button.addEventListener("click", appendNumber);
 });
@@ -141,3 +161,5 @@ operatorButtonElement.forEach((button) => {
 decimalButtonElement.addEventListener("click", appendDecimalPoint);
 
 equalButtonElement.addEventListener("click", getOperationResult);
+
+clearEntryButtonElement.addEventListener("click", clearEntry);
