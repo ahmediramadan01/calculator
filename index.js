@@ -21,3 +21,18 @@ const divide = function (a, b) {
 	if (parseFloat(b) === 0) return "UNDEFINED";
 	return parseFloat(a) / parseFloat(b);
 };
+
+const operate = function () {
+	switch (OPERATOR) {
+		case "+":
+			return add(FIRST_OPERAND, SECOND_OPERAND);
+		case "-":
+			return subtract(FIRST_OPERAND, SECOND_OPERAND);
+		case "×":
+			return multiply(FIRST_OPERAND, SECOND_OPERAND);
+		case "÷":
+			return divide(FIRST_OPERAND, SECOND_OPERAND);
+		default:
+			return "Invalid Operator";
+	}
+};
