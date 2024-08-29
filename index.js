@@ -150,6 +150,16 @@ const clearEntry = function (event) {
 	updateCurrentDisplay();
 };
 
+const clearDisplay = function (event) {
+	OPERATOR = "";
+	FIRST_OPERAND = "0";
+	SECOND_OPERAND = "";
+	DISPLAY_VALUE = "0";
+	displayEqualElement.textContent = "";
+	displayPreviousElement.textContent = "";
+	updateCurrentDisplay();
+};
+
 numbersButtonsElements.forEach((button) => {
 	button.addEventListener("click", appendNumber);
 });
@@ -163,3 +173,5 @@ decimalButtonElement.addEventListener("click", appendDecimalPoint);
 equalButtonElement.addEventListener("click", getOperationResult);
 
 clearEntryButtonElement.addEventListener("click", clearEntry);
+
+clearButtonElement.addEventListener("click", clearDisplay);
