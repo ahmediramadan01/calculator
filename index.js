@@ -207,3 +207,31 @@ clearButtonElement.addEventListener("click", clearDisplay);
 percentageButtonElement.addEventListener("click", divideByHundred);
 
 plusMinusButtonElement.addEventListener("click", togglePlusMinus);
+
+window.addEventListener("keydown", function (event) {
+	if (!isNaN(+event.key)) {
+		event.preventDefault();
+		appendNumber(event);
+	} else if (event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/") {
+		event.preventDefault();
+		if (event.key === "+") appendOperator("+");
+		else if (event.key === "-") appendOperator("-");
+		else if (event.key === "*") appendOperator("×");
+		else if (event.key === "/") appendOperator("÷");
+	} else if (event.key === ".") {
+		event.preventDefault();
+		appendDecimalPoint(event);
+	} else if (event.key === "=" || event.key === "Enter") {
+		event.preventDefault();
+		getOperationResult();
+	} else if (event.key === "Backspace" || event.key === "Delete") {
+		event.preventDefault();
+		clearEntry();
+	} else if (event.key === "Escape") {
+		event.preventDefault();
+		clearDisplay();
+	} else if (event.key === "%") {
+		event.preventDefault();
+		divideByHundred();
+	}
+});
