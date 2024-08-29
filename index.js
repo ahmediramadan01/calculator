@@ -1,9 +1,13 @@
 "use strict";
 
+// Global Variables
+
 let OPERATOR = "",
 	FIRST_OPERAND = "0",
 	SECOND_OPERAND = "",
 	DISPLAY_VALUE = "0";
+
+// DOM Elements
 
 const displayPreviousElement = document.querySelector(".display__previous");
 const displayEqualElement = document.querySelector(".display__equal");
@@ -20,6 +24,8 @@ const decimalButtonElement = document.querySelector(".button--decimal");
 const equalButtonElement = document.querySelector(".button--equal");
 const percentageButtonElement = document.querySelector(".button--percentage");
 const plusMinusButtonElement = document.querySelector(".button--plus-minus");
+
+// Helper Functions
 
 const add = function (a, b) {
 	return parseFloat(a) + parseFloat(b);
@@ -59,6 +65,8 @@ function updateCurrentDisplay() {
 	displaySecondElement.textContent = SECOND_OPERAND;
 }
 updateCurrentDisplay();
+
+// Callback functions
 
 const appendNumber = function (event) {
 	const clickedNumber = event.key || event.target.dataset.value;
@@ -187,6 +195,8 @@ const togglePlusMinus = function (event) {
 
 	updateCurrentDisplay();
 };
+
+// Event Listeners
 
 numbersButtonsElements.forEach((button) => {
 	button.addEventListener("click", appendNumber);
