@@ -5,6 +5,13 @@ let OPERATOR = "",
 	SECOND_OPERAND = "",
 	DISPLAY_VALUE = "0";
 
+const displayPreviousElement = document.querySelector(".display__previous");
+const displayEqualElement = document.querySelector(".display__equal");
+const displayCurrentElement = document.querySelector(".display__current");
+const displayFirstElement = document.querySelector(".display__first");
+const displayOperatorElement = document.querySelector(".display__operator");
+const displaySecondElement = document.querySelector(".display__second");
+
 const add = function (a, b) {
 	return parseFloat(a) + parseFloat(b);
 };
@@ -36,3 +43,10 @@ const operate = function () {
 			return "Invalid Operator";
 	}
 };
+
+function updateCurrentDisplay() {
+	displayFirstElement.textContent = FIRST_OPERAND;
+	displayOperatorElement.textContent = OPERATOR;
+	displaySecondElement.textContent = SECOND_OPERAND;
+}
+updateCurrentDisplay();
